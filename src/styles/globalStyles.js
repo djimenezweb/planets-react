@@ -1,15 +1,20 @@
 import { createGlobalStyle } from 'styled-components';
+import { COLORS } from '../constants/colors';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
 
 *,
 *::after,
 *::before {
 box-sizing: border-box;
+outline: 1px dashed rgba(255 0 0 / 0.4);
 }
 
 body {
 margin: 0;
+background-image: url('/assets/images/background-stars.svg');
+background-color: ${COLORS.almostBlack};
+color: white;
 font-family: 'League Spartan', sans-serif;
 font-weight: 400;
 font-size: 0.875rem;
@@ -69,4 +74,4 @@ h4 {
 
 `;
 
-export { GlobalStyle };
+export { GlobalStyles };

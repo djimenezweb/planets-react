@@ -4,6 +4,7 @@ const COLORS = {
 	almostWhite: '#D8D8D8',
 	almostBlack: '#070724',
 	darkGray: '#38384F',
+	gray: 'rgba(150, 150, 150, 0.5)',
 	lightGray: '#838391',
 	mercury: '#419EBB',
 	venus: '#EDA249',
