@@ -1,9 +1,16 @@
 import { StyledButton } from './styles';
 
-const ToggleButton = ({ isOpen }) => {
+const ToggleButton = ({ menuOpen, setMenuOpen }) => {
 	return (
-		<StyledButton>
-			<img src='/assets/images/icon-hamburger.svg' alt='Menu' />
+		<StyledButton onClick={() => setMenuOpen(!menuOpen)}>
+			<img
+				src={
+					menuOpen
+						? '/assets/images/icon-hamburger-closed.svg'
+						: '/assets/images/icon-hamburger-open.svg'
+				}
+				alt='Menu'
+			/>
 		</StyledButton>
 	);
 };

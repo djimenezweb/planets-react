@@ -1,16 +1,28 @@
-import { PLANETS } from '../../constants/planets';
-import { StyledIcon, StyledLi, StyledNav, StyledUl } from './styles';
+import { MENU } from '../../constants/menu';
+import {
+	StyledIcon,
+	StyledLi,
+	StyledNav,
+	StyledNavLink,
+	StyledUl
+} from './styles';
 
-const Menu = ({ show }) => {
+const Menu = ({ show, setMenuOpen }) => {
 	return (
-		<StyledNav>
+		<StyledNav show={show}>
 			<StyledUl>
-				{PLANETS.map(planet => {
+				{MENU.map(planet => {
 					return (
 						<StyledLi key={planet.id}>
-							<StyledIcon />
-							{planet.planet}
-							<img src='/assets/images/icon-chevron.svg' alt='' />
+							<StyledNavLink
+								to={planet.route}
+								onClick={() => setMenuOpen(!show)}
+								color={planet.color}
+							>
+								<StyledIcon />
+								{planet.planet}
+								<img src='/assets/images/icon-chevron.svg' alt='' />
+							</StyledNavLink>
 						</StyledLi>
 					);
 				})}

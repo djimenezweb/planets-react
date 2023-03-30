@@ -9,17 +9,13 @@ const Header = () => {
 	return (
 		<StyledHeader>
 			<StyledLogo>The Planets</StyledLogo>
-			<Menu show={menuOpen} />
+			<Menu show={menuOpen} setMenuOpen={setMenuOpen} />
 			<ToggleButton
-				onClick={() => toggleMenu(menuOpen, setMenuOpen)}
-				isOpen={menuOpen}
+				setMenuOpen={setMenuOpen}
+				menuOpen={menuOpen}
 			></ToggleButton>
 		</StyledHeader>
 	);
-};
-
-const toggleMenu = (menuOpen, setMenuOpen) => {
-	setMenuOpen(!menuOpen);
 };
 
 export default Header;

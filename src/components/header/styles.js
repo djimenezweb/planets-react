@@ -1,11 +1,23 @@
 import styled from 'styled-components';
+import { COLORS } from '../../constants/colors';
 
 const StyledHeader = styled.header`
 	position: relative;
 	padding: 1rem 1.5rem;
+	border-bottom: 1px solid ${COLORS.gray};
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@media screen and (min-width: 768px) and (max-width: 1439.99px) {
+		padding: 2rem 2.5rem 0 2rem;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	@media screen and (min-width: 1440px) {
+		padding: 0 2.5rem 0 2rem;
+	}
 `;
 
 const StyledLogo = styled.p`
