@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { MENU } from '../constants/menu';
+import Planet from '../pages/Planet';
 
 const Router = () => {
 	return (
@@ -8,7 +9,7 @@ const Router = () => {
 				<Route
 					key={planet.id}
 					path={planet.route}
-					element={<h1>{planet.planet}</h1>}
+					element={<Planet planetName={planet.planet} />}
 				/>
 			))}
 		</Routes>

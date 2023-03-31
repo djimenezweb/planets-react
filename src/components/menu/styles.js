@@ -5,6 +5,7 @@ import { COLORS } from '../../constants/colors';
 const StyledNav = styled.nav`
 	display: ${({ show }) => (show ? 'block' : 'none')};
 	position: absolute;
+	z-index: 100;
 	inset: 6rem 0 0;
 
 	@media screen and (min-width: 768px) {
