@@ -3,19 +3,26 @@ import styled from 'styled-components';
 import { COLORS } from '../../constants/colors';
 
 const StyledNav = styled.nav`
-	display: ${({ show }) => (show ? 'block' : 'none')};
+	/* display: ${({ show }) => (show ? 'block' : 'none')}; */
+	transform: ${({ show }) => (show ? 'translateX(0)' : 'translateX(100%)')};
+	background-color: ${COLORS.almostBlack};
 	position: absolute;
 	z-index: 100;
-	inset: 6rem 0 0;
+	width: 100%;
+	height: 100vh;
+	top: 5.5rem;
+	left: 0;
+	transition: translate 300ms ease-out;
+	/* inset: 6rem 0 0; */
 
 	@media screen and (min-width: 768px) {
-		display: block;
+		transform: translateX(0);
 		position: static;
+		height: auto;
 	}
 `;
 
 const StyledUl = styled.ul`
-	background-color: ${COLORS.almostBlack};
 	padding: 1.5rem;
 	margin: 0;
 	display: flex;
@@ -24,11 +31,13 @@ const StyledUl = styled.ul`
 	list-style: none;
 
 	@media screen and (min-width: 768px) {
+		padding: 0;
 		flex-direction: row;
 		gap: 2rem;
 	}
 
 	@media screen and (min-width: 1440px) {
+		justify-content: end;
 		padding: 0;
 	}
 `;
@@ -86,6 +95,9 @@ const StyledNavLink = styled(NavLink)`
 	@media screen and (min-width: 768px) {
 		color: ${COLORS.white};
 		opacity: 0.75;
+		font-size: 11px;
+		line-height: 1;
+		letter-spacing: 1px;
 		padding: 1.25rem 0;
 	}
 
