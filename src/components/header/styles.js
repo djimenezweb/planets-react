@@ -2,8 +2,10 @@ import styled from 'styled-components';
 import { COLORS } from '../../constants/colors';
 
 const StyledHeader = styled.header`
-	position: relative;
+	max-width: 1920px;
+	margin: 0 auto;
 	padding: 1rem 1.5rem;
+	position: relative;
 	border-bottom: 1px solid ${COLORS.gray};
 	display: flex;
 	justify-content: space-between;

@@ -17,6 +17,8 @@ const StyledGrid = styled.div`
 	}
 
 	@media screen and (min-width: 1440px) {
+		max-width: 1920px;
+		margin: 0 auto;
 		padding: 7rem 10rem 3.5rem;
 		grid-template-areas:
 			'picture picture info'
@@ -120,7 +122,12 @@ const StyledButton = styled.button`
 const StyledPictureContainer = styled.div`
 	position: relative;
 	grid-area: picture;
-	padding: 3rem 0;
+	padding: 1rem 1.5rem;
+	display: flex;
+
+	& > img {
+		margin: auto;
+	}
 
 	@media screen and (min-width: 1440px) {
 		padding: 3rem 0;
