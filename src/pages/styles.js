@@ -19,7 +19,7 @@ const StyledGrid = styled.div`
 	@media screen and (min-width: 1440px) {
 		max-width: 1920px;
 		margin: 0 auto;
-		padding: 7rem 10rem 3.5rem;
+		padding: 5rem 10rem 3.5rem;
 		grid-template-areas:
 			'picture picture info'
 			'picture picture tabs'
@@ -120,26 +120,48 @@ const StyledButton = styled.button`
 /***********/
 
 const StyledPictureContainer = styled.div`
-	position: relative;
 	grid-area: picture;
-	padding: 1rem 1.5rem;
+	margin: 1.5rem auto;
+	position: relative;
+	width: 16rem;
+	height: 16rem;
 	display: flex;
 
 	& > img {
 		margin: auto;
 	}
 
+	@media screen and (min-width: 768px) {
+		margin: 0;
+		width: 26rem;
+		height: 26rem;
+	}
+
 	@media screen and (min-width: 1440px) {
-		padding: 3rem 0;
+		width: 42rem;
+		height: 42rem;
 	}
 `;
 
 const StyledGeologyPicture = styled.div`
-	display: ${props => (props.active === 2 ? 'block' : 'none')};
+	transform: ${props => (props.active === 2 ? 'scale(1)' : 'scale(0)')};
 	position: absolute;
-	width: 163px;
-	bottom: 0;
-	left: calc(50% - 82px);
+	width: 6rem;
+	bottom: 2rem;
+	left: calc(50% - 3rem);
+	transition: transform 250ms;
+
+	@media screen and (min-width: 768px) {
+		width: 8rem;
+		bottom: 3rem;
+		left: calc(50% - 4rem);
+	}
+
+	@media screen and (min-width: 1440px) {
+		width: 10rem;
+		bottom: 4rem;
+		left: calc(50% - 5rem);
+	}
 `;
 
 /**********/
@@ -191,7 +213,7 @@ const StyledTitle = styled.h1`
 const StyledText = styled.p`
 	margin: 0;
 	text-align: center;
-	font-size: 12px;
+	font-size: 0.75rem;
 	font-weight: 400;
 	line-height: 2;
 
@@ -200,7 +222,7 @@ const StyledText = styled.p`
 	}
 
 	@media screen and (min-width: 1440px) {
-		font-size: 14px;
+		font-size: 0.875rem;
 		line-height: 1.78;
 	}
 `;
@@ -208,7 +230,7 @@ const StyledText = styled.p`
 const StyledSource = styled.p`
 	margin: auto 0 0;
 	text-align: center;
-	font-size: 12px;
+	font-size: 0.75rem;
 	line-height: 2;
 	color: rgba(255 255 255 / 0.5);
 	opacity: 1;
@@ -238,7 +260,7 @@ const StyledFactsContainer = styled.ul`
 	padding: 0 1.5rem;
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
+	gap: 0.5rem;
 	@media screen and (min-width: 768px) {
 		padding: 0;
 		width: 100%;
@@ -246,17 +268,16 @@ const StyledFactsContainer = styled.ul`
 		display: flex;
 		justify-content: space-between;
 		flex-direction: row;
-		gap: 8px;
 	}
 
 	@media screen and (min-width: 1440px) {
 		padding: 3rem 0 0;
-		gap: 30px;
+		gap: 1.875rem;
 	}
 `;
 
 const StyledFactsLi = styled.li`
-	padding: 12px 1.5rem;
+	padding: 0.75rem 1.5rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -267,7 +288,7 @@ const StyledFactsLi = styled.li`
 		flex-direction: column;
 		flex-basis: 100%;
 		align-items: start;
-		gap: 12px;
+		gap: 0.75rem;
 	}
 
 	@media screen and (min-width: 1440px) {
@@ -293,19 +314,19 @@ const StyledFactsTitle = styled.h3`
 const StyledFactsInfo = styled.p`
 	margin: 0;
 	font-family: 'Antonio', sans-serif;
-	font-size: 20px;
+	font-size: 1.25rem;
 	font-weight: 500;
 	line-height: 1;
 	letter-spacing: -0.75px;
 	text-transform: uppercase;
 	color: white;
 	@media screen and (min-width: 768px) {
-		font-size: 24px;
+		font-size: 1.5rem;
 		letter-spacing: -0.99px;
 	}
 
 	@media screen and (min-width: 1440px) {
-		font-size: 40px;
+		font-size: 2.5rem;
 		letter-spacing: -1.5px;
 	}
 `;

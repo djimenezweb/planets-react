@@ -12,6 +12,7 @@ const StyledHeader = styled.header`
 	align-items: center;
 
 	@media screen and (min-width: 768px) and (max-width: 1439.99px) {
+		margin: 0 auto 2rem;
 		padding: 2rem 3.125rem 0 3.125rem;
 		flex-direction: column;
 		justify-content: center;

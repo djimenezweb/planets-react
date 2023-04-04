@@ -3,17 +3,15 @@ import styled from 'styled-components';
 import { COLORS } from '../../constants/colors';
 
 const StyledNav = styled.nav`
-	/* display: ${({ show }) => (show ? 'block' : 'none')}; */
 	transform: ${({ show }) => (show ? 'translateX(0)' : 'translateX(100%)')};
 	background-color: ${COLORS.almostBlack};
 	position: absolute;
 	z-index: 100;
 	width: 100%;
 	height: 100vh;
-	top: 5.5rem;
+	top: 4.5rem;
 	left: 0;
-	transition: translate 300ms ease-out;
-	/* inset: 6rem 0 0; */
+	transition: transform 300ms ease-out;
 
 	@media screen and (min-width: 768px) {
 		transform: translateX(0);
