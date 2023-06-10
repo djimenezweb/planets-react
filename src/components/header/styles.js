@@ -10,7 +10,6 @@ const StyledHeader = styled.header`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	overflow-x: hidden;
 
 	@media screen and (min-width: 768px) and (max-width: 1439.99px) {
 		margin: 0 auto 2rem;

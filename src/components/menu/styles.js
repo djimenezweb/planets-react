@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { COLORS } from '../../constants/colors';
 
 const StyledNav = styled.nav`
-	transform: ${({ show }) => (show ? 'translateX(0)' : 'translateX(100%)')};
+	transform: ${({ show }) => (show ? 'translateX(0%)' : 'translateX(100%)')};
 	background-color: ${COLORS.almostBlack};
 	position: absolute;
 	z-index: 100;

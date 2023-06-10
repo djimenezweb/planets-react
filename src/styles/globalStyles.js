@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 import { COLORS } from '../constants/colors';
 
 const GlobalStyles = createGlobalStyle`
-
 *,
 *::after,
 *::before {
